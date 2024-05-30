@@ -1,55 +1,66 @@
 {
-  "name": "@evo-mark/colour-convert",
-  "description": "Plain colour conversion functions",
-  "version": "3.0.0",
-  "author": "Josh Junon <josh@junon.me>",
-  "contributors": [
-    "Heather Arthur <fayearthur@gmail.com>",
-    "Craig Riley <c.riley@evomark.co.uk>"
-  ],
-  "license": "MIT",
-  "repository": "evo-mark/colour-convert",
-  "scripts": {
-    "pretest": "xo",
-    "test": "node test/basic.js"
-  },
-  "engines": {
-    "node": "^18.0.0|^20.0.0|^21.0.0|^22.0.0"
-  },
-  "type": "module",
-  "keywords": [
-    "color",
-    "colour",
-    "convert",
-    "converter",
-    "conversion",
-    "rgb",
-    "hsl",
-    "hsv",
-    "hwb",
-    "cmyk",
-    "ansi",
-    "ansi16"
-  ],
-  "files": [
-    "index.js",
-    "conversions.js",
-    "route.js"
-  ],
-  "xo": {
-    "rules": {
-      "default-case": 0,
-      "no-inline-comments": 0,
-      "operator-linebreak": 0,
-      "unicorn/prefer-exponentiation-operator": 0
-    }
-  },
-  "devDependencies": {
-    "chalk": "^2.4.2",
-    "jimp": "^0.16.1",
-    "xo": "^0.24.0"
-  },
-  "dependencies": {
-    "color-name": "~1.1.4"
-  }
+	"name": "@evo-mark/colour-convert",
+	"description": "Plain colour conversion functions",
+	"version": "3.0.0",
+	"author": "Josh Junon <josh@junon.me>",
+	"contributors": [
+		"Heather Arthur <fayearthur@gmail.com>",
+		"Craig Riley <c.riley@evomark.co.uk>"
+	],
+	"license": "MIT",
+	"repository": "evo-mark/colour-convert",
+	"scripts": {
+		"pretest": "npx eslint",
+		"test": "node test/basic.js",
+		"test:grid": "node test/ansi-colour-grid.js",
+		"test:colourise": "node test/ansi-colourise.js './test/test-colour.jpg' './test/test-output.jpg'"
+	},
+	"engines": {
+		"node": "^18.0.0 || ^20.0.0 || ^21.0.0 || ^22.0.0"
+	},
+	"type": "module",
+	"keywords": [
+		"color",
+		"colour",
+		"convert",
+		"converter",
+		"conversion",
+		"rgb",
+		"hsl",
+		"hsv",
+		"hwb",
+		"cmyk",
+		"ansi",
+		"ansi16"
+	],
+	"files": [
+		"index.js",
+		"conversions.js",
+		"route.js"
+	],
+	"xo": {
+		"rules": {
+			"default-case": 0,
+			"no-inline-comments": 0,
+			"operator-linebreak": 0,
+			"unicorn/prefer-exponentiation-operator": 0,
+			"quotes": [
+				"error",
+				"double"
+			]
+		}
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.3.0",
+		"chalk": "^5.3.0",
+		"eslint": "^9.3.0",
+		"eslint-config-prettier": "^9.1.0",
+		"globals": "^15.3.0",
+		"jimp": "^0.22.12",
+		"prettier": "^3.2.5"
+	},
+	"dependencies": {
+		"color-name": "^2.0.0"
+	},
+	"packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b"
 }

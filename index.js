@@ -1,5 +1,5 @@
-import conversions from './conversions';
-import route from './route';
+import conversions from './conversions.js';
+import route from './route.js';
 
 const convert = {};
 

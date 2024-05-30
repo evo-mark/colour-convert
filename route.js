@@ -1,4 +1,4 @@
-import conversions from './conversions';
+import conversions from './conversions.js';
 
 /*
 	This function routes a model to all other models.

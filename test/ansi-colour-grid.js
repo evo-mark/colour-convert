@@ -1,4 +1,4 @@
-import cc from '..';
+import cc from '../index.js';
 
 process.stdout.write('\n');
 

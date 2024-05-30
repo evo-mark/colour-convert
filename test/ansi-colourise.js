@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import jimp from "jimp/es";
-import cc from '..';
+import jimp from "jimp";
+import { resolve } from "node:path";
+import cc from '../index.js';
 
 async function main() {
 	if (process.argv.length !== 4) {
@@ -9,8 +10,8 @@ async function main() {
 		process.exit(2);
 	}
 
-	const inputPath = process.argv[2];
-	const outputPath = process.argv[3];
+	const inputPath = resolve(process.argv[2]);
+	const outputPath = resolve(process.argv[3]);
 
 	const img = await jimp.read(inputPath);
 
