@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const jimp = require('jimp');
-const cc = require('..');
+import jimp from "jimp/es";
+import cc from '..';
 
 async function main() {
 	if (process.argv.length !== 4) {

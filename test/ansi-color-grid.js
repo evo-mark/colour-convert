@@ -1,4 +1,4 @@
-const cc = require('..');
+import cc from '..';
 
 process.stdout.write('\n');
 

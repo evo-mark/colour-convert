@@ -1,20 +1,22 @@
 {
-  "name": "color-convert",
-  "description": "Plain color conversion functions",
-  "version": "2.0.1",
+  "name": "@evo-mark/colour-convert",
+  "description": "Plain colour conversion functions",
+  "version": "3.0.0",
   "author": "Josh Junon <josh@junon.me>",
   "contributors": [
-    "Heather Arthur <fayearthur@gmail.com>"
+    "Heather Arthur <fayearthur@gmail.com>",
+    "Craig Riley <c.riley@evomark.co.uk>"
   ],
   "license": "MIT",
-  "repository": "Qix-/color-convert",
+  "repository": "evo-mark/colour-convert",
   "scripts": {
     "pretest": "xo",
     "test": "node test/basic.js"
   },
   "engines": {
-    "node": ">=7.0.0"
+    "node": "^18.0.0|^20.0.0|^21.0.0|^22.0.0"
   },
+  "type": "module",
   "keywords": [
     "color",
     "colour",

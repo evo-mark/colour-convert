@@ -1,3 +1,8 @@
+# 3.0.0 - 2024-05-30
+
+- Converted to ESM
+- Localised for the UK
+
 # 1.0.0 - 2016-01-07
 
 - Removed: unused speed test

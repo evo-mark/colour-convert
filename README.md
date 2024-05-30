@@ -1,10 +1,10 @@
-# color-convert
+# colour-convert
 
-Color-convert is a color conversion library for JavaScript and node.
+Colour-convert is a colour conversion library for JavaScript and node.
 It converts all ways between `rgb`, `hsl`, `hsv`, `hwb`, `cmyk`, `ansi`, `ansi16`, `hex` strings, and CSS `keyword`s (will round to closest):
 
 ```js
-import convert from 'color-convert';
+import convert from 'colour-convert';
 
 convert.rgb.hsl(140, 200, 100);             // [96, 48, 59]
 convert.keyword.rgb('blue');                // [0, 0, 255]
@@ -17,7 +17,7 @@ const ansiChannels = convert.ansi16.channels; // 1
 # Install
 
 ```sh
-$ npm install color-convert
+$ npm install colour-convert
 ```
 
 # API
@@ -29,7 +29,7 @@ All functions have a rounded and unrounded variant. By default, return values ar
 All 'from' functions have a hidden property called `.channels` that indicates the number of channels the function expects (not including alpha).
 
 ```js
-import convert from 'color-convert';
+import convert from 'colour-convert';
 
 // Hex to LAB
 convert.hex.lab('DEADBF');         // [ 76, 21, -2 ]
@@ -43,10 +43,10 @@ convert.rgb.cmyk.raw(167, 255, 4); // [ 34.509803921568626, 0, 98.43137254901961
 ### Arrays
 All functions that accept multiple arguments also support passing an array.
 
-Note that this does **not** apply to functions that convert from a color that only requires one value (e.g. `keyword`, `ansi256`, `hex`, etc.)
+Note that this does **not** apply to functions that convert from a colour that only requires one value (e.g. `keyword`, `ansi256`, `hex`, etc.)
 
 ```js
-import convert from 'color-convert';
+import convert from 'colour-convert';
 
 convert.rgb.hex(123, 45, 67);      // '7B2D43'
 convert.rgb.hex([123, 45, 67]);    // '7B2D43'
@@ -54,12 +54,12 @@ convert.rgb.hex([123, 45, 67]);    // '7B2D43'
 
 ## Routing
 
-Conversions that don't have an _explicitly_ defined conversion (in [conversions.js](conversions.js)), but can be converted by means of sub-conversions (e.g. XYZ -> **RGB** -> CMYK), are automatically routed together. This allows just about any color model supported by `color-convert` to be converted to any other model, so long as a sub-conversion path exists. This is also true for conversions requiring more than one step in between (e.g. LCH -> **LAB** -> **XYZ** -> **RGB** -> Hex).
+Conversions that don't have an _explicitly_ defined conversion (in [conversions.js](conversions.js)), but can be converted by means of sub-conversions (e.g. XYZ -> **RGB** -> CMYK), are automatically routed together. This allows just about any colour model supported by `colour-convert` to be converted to any other model, so long as a sub-conversion path exists. This is also true for conversions requiring more than one step in between (e.g. LCH -> **LAB** -> **XYZ** -> **RGB** -> Hex).
 
 Keep in mind that extensive conversions _may_ result in a loss of precision, and exist only to be complete. For a list of "direct" (single-step) conversions, see [conversions.js](conversions.js).
 
-## Color Space Scales
-Conversions rely on an agreed upon 'full-scale' value for each of the channels. Listed here are those values for the most common color spaces
+## Colour Space Scales
+Conversions rely on an agreed upon 'full-scale' value for each of the channels. Listed here are those values for the most common colour spaces
 
 ### rgb
 channel | full-scale value
@@ -105,7 +105,7 @@ hex | ```0xffffff```
 ### keyword
 channel | value
 ---|---
-name | any key from [color-name](https://github.com/colorjs/color-name/blob/master/index.js)
+name | any key from [color-name](https://github.com/colourjs/color-name/blob/master/index.js)
 
 ### apple
 channel | full-scale value
@@ -124,7 +124,8 @@ g | 100
 If there is a new model you would like to support, or want to add a direct conversion between two existing models, please send us a pull request.
 
 # License
-Copyright &copy; 2011-2016, Heather Arthur.
+Copyright &copy; 2024, Evo Mark Ltd
 Copyright &copy; 2016-2021, Josh Junon.
+Copyright &copy; 2011-2016, Heather Arthur.
 
 Licensed under the [MIT License](LICENSE).

@@ -1,10 +1,10 @@
-const assert = require('assert');
-const chalk = require('chalk');
-const keywords = require('color-name');
+import assert from "node:assert";
+import chalk from 'chalk';
+import keywords from 'color-name';
 
-const conversions = require('../conversions');
+import conversions from '../conversions';
 
-const convert = require('..');
+import convert from '..';
 
 const models = Object.keys(conversions);
 for (let len = models.length, i = 0; i < len; i++) {
